@@ -67,7 +67,7 @@
     <script>
         const studentData = JSON.parse(sessionStorage.getItem('studentData'));
         if (studentData) {
-            document.getElementById('dashboardBehavioralInfo').textContent = studentData.behavioralInfo || "No information available.";
+            document.getElementById('dashboardBehavioralInfo').textContent = studentData.behavioralInformation || "No information available.";
         } else {
             alert("No students data found. Please log in.");
             window.location.href = 'index.html';

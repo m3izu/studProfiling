@@ -18,6 +18,11 @@ const yearLevelInput = document.getElementById('yearLevel');
 const enrollmentStatusInput = document.getElementById('enrollmentStatus');
 const programOfStudyInput = document.getElementById('programOfStudy');
 const searchIdInput = document.getElementById('searchId');
+const behavioralInformationInput = document.getElementById('behavioralInformation');
+const extraCurricularActivitiesInput = document.getElementById('extraCurricularActivities');
+const suppAndIntDataInput = document.getElementById('suppAndIntData');
+
+
 const outputDiv = document.getElementById('output');
 
 document.getElementById('search').addEventListener('click', async () => {
@@ -35,6 +40,10 @@ document.getElementById('search').addEventListener('click', async () => {
             yearLevelInput.value = data.yearLevel || '';
             enrollmentStatusInput.value = data.enrollmentStatus || '';
             programOfStudyInput.value = data.programOfStudy || '';
+            behavioralInformationInput.value = data.behavioralInformation || '';
+            extraCurricularActivitiesInput.value = data.extraCurricularActivities || '';
+            suppAndIntDataInput.value = data.suppAndIntData || '';
+
             outputDiv.textContent = "Student data loaded.";
         } else {
             outputDiv.textContent = "No such document!";
@@ -59,6 +68,9 @@ document.getElementById('update').addEventListener('click', async () => {
             yearLevel: yearLevelInput.value,
             enrollmentStatus: enrollmentStatusInput.value,
             programOfStudy: programOfStudyInput.value,
+            behavioralInformation: behavioralInformationInput.value,
+            extraCurricularActivities: extraCurricularActivitiesInput.value,
+            suppAndIntData: suppAndIntDataInput.value
 
         });
         outputDiv.textContent = "Student data updated successfully.";
